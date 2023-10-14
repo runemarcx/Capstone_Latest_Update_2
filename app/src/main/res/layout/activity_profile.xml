@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAD7CD"
+    tools:context=".Profile_Activity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="60dp"
+        android:layout_marginBottom="21dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/white_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_person" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+
+   <ImageView
+        android:id="@+id/greenbar"
+        android:layout_width="480dp"
+        android:layout_height="380dp"
+        android:layout_marginTop="-180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cirlce_solid_noborder_profile" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="User Name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custom_textview"
+        android:drawablePadding="20dp"
+        android:padding="15dp"
+        android:text="User Email"
+        android:textColor="@color/black"
+        app:drawableLeftCompat="@drawable/ic_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container" />
+
+    <TextView
+        android:id="@+id/user_barangay"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custom_textview"
+        android:drawablePadding="20dp"
+        android:padding="15dp"
+        android:text="User Barangay"
+        android:textColor="@color/black"
+        app:drawableLeftCompat="@drawable/ic_barangay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_email" />
+
+    <TextView
+        android:id="@+id/user_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/custom_textview"
+        android:drawablePadding="20dp"
+        android:padding="15dp"
+        android:text="User Password"
+        android:textColor="@color/black"
+        app:drawableLeftCompat="@drawable/ic_lock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_barangay" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <View
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/custom_pointsbox" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:elevation="100dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="5dp"
+            android:text="POINTS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/points_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="27dp"
+            android:elevation="100dp"
+            android:fontFamily="sans-serif-black"
+            android:hint="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#6A6A6A"
+            android:textSize="34sp" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/logoutbtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#588157"
+        android:text="Logout"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

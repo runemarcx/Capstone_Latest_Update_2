@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_task"
+        android:icon="@drawable/ic_baseline_add_task_24"
+        android:title="Task"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_reward"
+        android:icon="@drawable/ic_baseline_card_giftcard_24"
+        android:title="Reward"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_transaction"
+        android:icon="@drawable/ic_baseline_monetization_on_24"
+        android:title="Transaction"
+        app:showAsAction="ifRoom" />
+
+
+
+</menu>

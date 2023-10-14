@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logintab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAD7CD"
+    android:clipToOutline="true"
+    tools:context=".accounthandling.LoginActivity">
+
+    <ImageView
+        android:id="@+id/rewardImage2"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:lineSpacingExtra="2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:srcCompat="@drawable/ecotaskreward_logo" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="top"
+        android:lineSpacingExtra="-6sp"
+        android:text="WELCOME"
+        android:textColor="#808080"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/rewardImage2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/go_green_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|top"
+        android:lineSpacingExtra="-2sp"
+        android:text="Go Green, Go Clean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rewardImage2" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="8dp"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go_green_go" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="8dp"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_email" />
+
+    <TextView
+        android:id="@+id/singupRedirect1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:text="Don’t have an account ?"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/singupRedirect"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logingmail" />
+
+    <TextView
+        android:id="@+id/singupRedirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:text="Sign Up"
+        android:textColor="#588157"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/singupRedirect1"
+        app:layout_constraintTop_toBottomOf="@+id/logingmail" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#588157"
+        android:textColor="#FFFF"
+        android:text="Sign In"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+
+    <Button
+        android:id="@+id/logingmail"
+        android:layout_width="300dp"
+        android:layout_height="62dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="sans-serif-black"
+        android:text="GMAIL"
+        android:textColor="#588157"
+        android:textSize="14sp"
+        app:icon="@drawable/icongmail"
+        app:iconGravity="textStart"
+        app:iconTint="#588157"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

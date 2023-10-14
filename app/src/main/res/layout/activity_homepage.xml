@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hometab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAD7CD"
+    android:clipToOutline="true"
+    tools:context=".Homepage">
+
+    <ImageView
+        android:id="@+id/greenbar"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cirlce_solid_noborder1" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/cirlce_solid"
+        app:srcCompat="@drawable/ic_person2" />
+
+    <ImageView
+        android:id="@+id/rewardImage3"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logowhite" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="30dp"
+        android:elevation="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/custom_pointsbox" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:elevation="100dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="10dp"
+            android:text="POINTS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#6A6A6A" />
+
+        <TextView
+            android:id="@+id/points_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="27dp"
+            android:elevation="100dp"
+            android:fontFamily="sans-serif-black"
+            android:hint="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#6A6A6A"
+            android:textSize="34sp" />
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:backgroundTint="#588157"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_announce"
+        android:layout_width="match_parent"
+        android:layout_height="391dp"
+        android:layout_marginTop="275dp"
+        android:orientation="horizontal"
+        android:padding="16dp"/>
+
+</RelativeLayout>
